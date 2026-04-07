@@ -37,4 +37,6 @@ more events...
 
 which includes all relevant information regarding the data within the waveform.
 
-To get a *wheel* file, run `maturin build`, and a `.whl` file will be placed within `COLT/target/wheels`
+To get a *wheel* file, there are currently two options:
+- check the github actions, which provide links to all the generated wheels under `CI.yml`
+- run `maturin build`, and a `.whl` file will be placed within `COLT/target/wheels`
