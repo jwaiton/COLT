@@ -50,11 +50,16 @@ impl Event {
         let header      = Header::from_reader(reader)?;
         // remove header 
         let n           = ((header.event_size - 24) / 2) as usize;
-        let mut samples = Vec::with_capacity(n);
 
-        for _ in 0..n {
-            samples.push(reader.read_u16::<LittleEndian>()?);
-        }
+        // read all data into buffer
+        let mut buf = vec![0u8; n * 2];
+        reader.read_exact(&mut buf)?;
+        
+        // separate into u16 sied chunks, map and collect
+        let samples: Vec<u16> = buf
+            .chunks_exact(2)
+            .map(|b| u16::from_le_bytes([b[0], b[1]]))
+            .collect();
 
         Ok(Self {
             header: header,
