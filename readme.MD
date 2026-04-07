@@ -18,8 +18,8 @@ for evt in EventReader('/home/e78368jw/Documents/COLT/scripts/wave1.dat'):
 ```
 
 This will output:
-```
-...
+```python
+more events...
 {'event_size': 284, 'board_id': 0, 'pattern': 0, 'board_channel': 1, 'event_counter': 9862, 'timestamp': 1232799195, 'data': array([7703, 7708, 7693, 7706, 7709, 7699, 7707, 7699, 7708, 7707, 7699,
        7706, 7703, 7710, 7699, 7702, 7704, 7702, 7707, 7704, 7702, 7702,
        7708, 7701, 7703, 7708, 7701, 7699, 7704, 7703, 7704, 7706, 7707,
@@ -32,7 +32,9 @@ This will output:
        7706, 7708, 7698, 7707, 7704, 7703, 7709, 7707, 7707, 7698, 7709,
        7709, 7700, 7706, 7708, 7704, 7702, 7711, 7702, 7705, 7705, 7703,
        7706, 7705, 7710, 7699, 7702, 7713, 7700, 7708, 7698], dtype=uint16)}
-...
+more events...
 ```
 
 which includes all relevant information regarding the data within the waveform.
+
+To get a *wheel* file, run `maturin build`, and a `.whl` file will be placed within `COLT/target/wheels`
