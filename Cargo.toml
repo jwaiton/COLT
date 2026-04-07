@@ -1,0 +1,17 @@
+[package]
+name = "COLT"
+version = "0.1.0"
+edition = "2024"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "colt"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3      = "0.27.0"
+numpy     = "0.27.0"
+byteorder = "1.4"
+
+[dev-dependencies]
+proptest  = "1.0"
