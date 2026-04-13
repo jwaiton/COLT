@@ -3,10 +3,6 @@
 echo "COLT - CAEN Output Loader & Translator"
 
 
-# if anything fails breakout
-set -e
-
-
 # initialise virtual environment
 python -m venv .venv
 source .venv/bin/activate
