@@ -2,7 +2,7 @@
 
 Python package for extracting WaveDump events into iterators from binary files.
 
-Currently only supports WaveDump 1 .dat files.
+Support WaveDump 1 and WaveDump 2 files
 
 Use:
 
@@ -13,7 +13,7 @@ Use:
 import numpy as np
 from colt import EventReader
 
-for evt in EventReader('/home/e78368jw/Documents/COLT/scripts/wave1.dat'):
+for evt in EventReader('/home/e78368jw/Documents/COLT/scripts/wave1.dat', "WD1"):
     print(evt)
 ```
 
@@ -36,6 +36,8 @@ more events...
 ```
 
 which includes all relevant information regarding the data within the waveform.
+
+For WaveDump 2, this instead produces an array containing all events data, which needs to be separated by the user as seen in `test_colt_WD2.py`
 
 To get a *wheel* file, there are currently two options:
 - check the github actions, which provide links to all the generated wheels under `CI.yml`
