@@ -73,18 +73,18 @@ impl Event {
  * ===========================================================
 */
 
-pub struct EventReader<R: Read> {
+pub struct WD1Reader<R: Read> {
     reader  : R,
     errored : bool, // check if EOF or actually broken
 }
 
-impl<R: Read> EventReader<R> {
+impl<R: Read> WD1Reader<R> {
     pub fn new(reader: R) -> Self {
         Self {reader, errored: false}
     }
 }
 
-impl<R: Read> Iterator for EventReader<R> {
+impl<R: Read> Iterator for WD1Reader<R> {
    type Item = io::Result<Event>; 
 
    fn next(&mut self) -> Option<Self::Item> {
