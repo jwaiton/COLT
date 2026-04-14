@@ -151,7 +151,6 @@ mod tests {
             // collect event size explicitly from samples
             let evt_size = ((samples.len() * 2) + 24) as i32;
             // generate the data for comparison
-            let n = samples.len() as i32;
             let mut data = Vec::new();
             data.extend_from_slice(&evt_size.to_le_bytes());
             data.extend_from_slice(&brd_id  .to_le_bytes());
@@ -173,4 +172,40 @@ mod tests {
 
 
     }
+    proptest! {
+        #[test]
+        fn test_wd1reader(
+             // event size must fit expected shape
+            // 2 bigger than the header
+            brd_id  : i32, ptrn   : i32,
+            brd_ch   : i32, evt_cnt : i32, 
+            tmstmp : i32,
+            // ensure samples matches event size
+            samples: Vec<u16>,
+            ) {
+             // collect event size explicitly from samples
+            let evt_size = ((samples.len() * 2) + 24) as i32;
+            // generate the data for comparison
+            let mut data = Vec::new();
+            data.extend_from_slice(&evt_size.to_le_bytes());
+            data.extend_from_slice(&brd_id  .to_le_bytes());
+            data.extend_from_slice(&ptrn    .to_le_bytes());
+            data.extend_from_slice(&brd_ch  .to_le_bytes());
+            data.extend_from_slice(&evt_cnt .to_le_bytes());
+            data.extend_from_slice(&tmstmp  .to_le_bytes());
+            for s in &samples {
+                data.extend_from_slice(&s.to_le_bytes());
+            }
+            let cursor = Cursor::new(data);
+
+            let mut wd1reader = WD1Reader::new(cursor);
+            let event         = wd1reader.next().unwrap()?;
+
+            prop_assert_eq!(event.data.len(), samples.len());
+            prop_assert_eq!(event.data, samples);
+
+
+        }
+    }
+
 }
