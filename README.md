@@ -36,7 +36,7 @@ COLT currently supports Wavedump 1 \& 2 files, and has been tested with [these d
 ### Using pip
 
 ```
-pip install colt
+pip install nuZOO-COLT 
 ```
 
 ### From scratch
@@ -57,7 +57,7 @@ This will install COLT into the local virtual environment, which through `setup.
 With COLT initialised, write a python script like so:
 ```python
 import numpy as np
-from colt import EventReader                                              #  Wavedump 1
+from nuzoo-colt import EventReader                                              #  Wavedump 1
                                                                           # \/
 for evt in EventReader('/home/e78368jw/Documents/COLT/scripts/wave1.dat', "WD1"):
     print(evt)
