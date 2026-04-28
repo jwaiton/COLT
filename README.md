@@ -1,5 +1,5 @@
 <a href="https://github.com/nu-ZOO/COLT">
-    <img src="assets/COLT.png" alt="MULE" style="display: block; margin: 0;"/>
+    <img src="assets/COLT.png" alt="COLT" style="display: block; margin: 0;"/>
 </a>
 
 <div align="right" style="margin-top: 0;">
