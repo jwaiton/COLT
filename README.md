@@ -1,4 +1,4 @@
-<a href="https://github.com/jwaiton/COLT">
+<a href="https://github.com/nu-ZOO/COLT">
     <img src="assets/COLT.png" alt="MULE" style="display: block; margin: 0;"/>
 </a>
 
@@ -11,10 +11,10 @@
 
 <div align="center">
 
-  [![CI](https://github.com/jwaiton/COLT/actions/workflows/CI.yml/badge.svg)](https://github.com/jwaiton/COLT/actions/workflows/CI.yml)
-  [![tests](https://github.com/jwaiton/COLT/actions/workflows/tests.yml/badge.svg)](https://github.com/jwaiton/COLT/actions/workflows/Tests.yml)
-  ![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/jwaiton/COLT)
-  [![GitHub License](https://img.shields.io/github/license/nu-ZOO/MULE)](https://github.com/jwaiton/COLT/blob/main/LICENSE)
+  [![CI](https://github.com/nu-ZOO/COLT/actions/workflows/CI.yml/badge.svg)](https://github.com/nu-ZOO/COLT/actions/workflows/CI.yml)
+  [![tests](https://github.com/nu-ZOO/COLT/actions/workflows/tests.yml/badge.svg)](https://github.com/nu-ZOO/COLT/actions/workflows/Tests.yml)
+  ![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/nu-ZOO/COLT)
+  [![GitHub License](https://img.shields.io/github/license/nu-ZOO/MULE)](https://github.com/nu-ZOO/COLT/blob/main/LICENSE)
 </div>
 
 <p align="center">
@@ -87,7 +87,7 @@ For WaveDump 2, each iterator produces an array containing the waveforms of all 
 this can be seen in [`test_colt_WD2.py`](https://github.com/nu-ZOO/COLT/blob/main/python/scripts/test_colt_WD2.py). General templates of the usage are seen in [`python/scripts/`](https://github.com/nu-ZOO/COLT/tree/main/python/scripts)
 
 To get a *wheel* file, there are currently two options:
-- within the **artifacts** section of the most recently run `CI.yml` github workflow, found [here](https://github.com/jwaiton/COLT/actions/workflows/CI.yml).
+- within the **artifacts** section of the most recently run `CI.yml` github workflow, found [here](https://github.com/nu-ZOO/COLT/actions/workflows/CI.yml).
 - run `maturin build`, and a `.whl` file will be placed within `COLT/target/wheels`
 
 
