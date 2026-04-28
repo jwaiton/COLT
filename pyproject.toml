@@ -4,6 +4,9 @@ build-backend = "maturin"
 
 [project]
 name = "nuZOO-COLT"
+readme = "README.md"
+description = "CAEN Output Loader and Translator"
+keywords = ["caen", "physics", "data"]
 requires-python = ">=3.8"
 classifiers = [
     "Programming Language :: Rust",
