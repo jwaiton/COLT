@@ -15,6 +15,7 @@
   [![tests](https://github.com/nu-ZOO/COLT/actions/workflows/tests.yml/badge.svg)](https://github.com/nu-ZOO/COLT/actions/workflows/Tests.yml)
   ![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/nu-ZOO/COLT)
   [![GitHub License](https://img.shields.io/github/license/nu-ZOO/MULE)](https://github.com/nu-ZOO/COLT/blob/main/LICENSE)
+  ![PyPI - Downloads](https://img.shields.io/pypi/dm/nuZOO-COLT)
 </div>
 
 <p align="center">
@@ -27,7 +28,7 @@
 </p>
 
 ## What is COLT?
-COLT is a simple python package for extracting WaveDump events into iterators from binary files, written in Rust.
+COLT is a simple python package for decoding WaveDump events into iterators from binary files, written in Rust.
 
 COLT currently supports Wavedump 1 \& 2 files, and has been tested with [these digitisers](https://github.com/nu-ZOO/COLT/wiki/tested_digitisers)
 
